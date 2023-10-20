@@ -36,7 +36,7 @@ public class MarinersPage {
 	WebElement businessClassClick;
 	@FindBy (xpath = "//*[@id=\"root\"]/div/div[2]/section/div[1]/form/div[2]/div[3]/ul/li/ul/li[4]/div/div[2]") WebElement doneClick;
 	
-	@FindBy (xpath = "//*[@id=\"root\"]/div/div[2]/section/div[1]/form/div[2]/div[4]/input") WebElement searchClick;
+	@FindBy (xpath = "//*[@id=\"root\"]/div/div[2]/section/div[1]/form/div[2]/div[4]/input") WebElement searchButton;
 	
 	
 	public MarinersPage(WebDriver driver) {
@@ -120,7 +120,7 @@ public class MarinersPage {
 	}
 	
 	public void searchForFlights() {
-		searchClick.click();
+		searchButton.click();
 	}
 	
 	
