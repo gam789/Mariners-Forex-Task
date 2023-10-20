@@ -36,7 +36,7 @@ public class MarinersPage {
 	WebElement businessClassClick;
 	@FindBy (xpath = "//*[@id=\"root\"]/div/div[2]/section/div[1]/form/div[2]/div[3]/ul/li/ul/li[4]/div/div[2]") WebElement doneClick;
 	
-	@FindBy (xpath = "//*[@id=\"root\"]/div/div[2]/section/div[1]/form/div[2]/div[4]/input") WebElement searchButton;
+	@FindBy (xpath = "//*[@id=\"root\"]/div/div[2]/section/div[1]/form/div[2]/div[4]/input") WebElement search;
 	
 	
 	public MarinersPage(WebDriver driver) {
@@ -55,17 +55,17 @@ public class MarinersPage {
 	}
 	
 	public void leavingArrivingMariners(String leaving, String arriving) throws Exception {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		leavingFromField.click();
 		leavingFromField.sendKeys(leaving);
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		leavingFromField.sendKeys(Keys.ENTER);
 		
 		Thread.sleep(3000);
 		
 		arrivingToField.click();
 		arrivingToField.sendKeys(arriving);
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		arrivingToField.sendKeys(Keys.ENTER);
 	}
 	
@@ -120,7 +120,7 @@ public class MarinersPage {
 	}
 	
 	public void searchForFlights() {
-		searchButton.click();
+		search.click();
 	}
 	
 	
